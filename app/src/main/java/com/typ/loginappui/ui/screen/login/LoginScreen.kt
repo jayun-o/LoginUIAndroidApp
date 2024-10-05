@@ -13,7 +13,9 @@ import com.typ.loginappui.ui.components.AuthenticationScreenTemplate
 
 @Composable
 fun LoginScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onLoginClicked: () -> Unit,
+    onRegistrationClicked: () -> Unit
 ) {
     AuthenticationScreenTemplate(
         modifier = modifier,
@@ -34,8 +36,8 @@ fun LoginScreen(
             contentColor = Color.White
         ),
         actionButtonShadow = PrimaryPinkDark,
-        onMainActionButtonClicked = { /*TO DO*/ },
-        onSecomdaryActionButtonClicked = { /* TO DO */ }
+        onMainActionButtonClicked = onLoginClicked,
+        onSecomdaryActionButtonClicked = onRegistrationClicked
     )
 }
 

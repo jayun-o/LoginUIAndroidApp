@@ -30,7 +30,10 @@ import com.typ.loginappui.ui.theme.PrimaryYellowDark
 import com.typ.loginappui.ui.theme.PrimaryYellowLight
 
 @Composable
-fun WelcomeScreen(modifier: Modifier = Modifier) {
+fun WelcomeScreen(
+    modifier: Modifier = Modifier,
+    onOpenLoginClicked: () -> Unit
+    ) {
     Column (
         modifier = modifier
             .fillMaxSize()
@@ -77,7 +80,7 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
         ActionButton(
             text = "Next",
             isNavigationArrowVisible = true,
-            onClicked = {},
+            onClicked = onOpenLoginClicked,
             colors = ButtonDefaults.buttonColors(
                 containerColor = PrimaryYellowDark,
                 contentColor = DarkTextColor

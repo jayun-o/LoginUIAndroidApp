@@ -12,7 +12,9 @@ import com.typ.loginappui.ui.theme.PrimaryVioletLight
 
 @Composable
 fun RegistrationScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onRegisterClicked: () -> Unit,
+    onLoginClicked: () -> Unit
 ) {
     AuthenticationScreenTemplate(
         modifier = modifier,
@@ -33,7 +35,7 @@ fun RegistrationScreen(
             contentColor = Color.White
         ),
         actionButtonShadow = PrimaryVioletDark,
-        onMainActionButtonClicked = { /*TO DO*/ },
-        onSecomdaryActionButtonClicked = { /* TO DO */ }
+        onMainActionButtonClicked = onRegisterClicked,
+        onSecomdaryActionButtonClicked = onLoginClicked
     )
 }
